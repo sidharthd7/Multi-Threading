@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
-      origin: 'http://localhost:5173',  // Allow the front-end to connect
+      origin: 'http://localhost:5173',  
       methods: ['GET', 'POST'],
     },
   });
@@ -27,11 +27,11 @@ app.get('/', (req, res) => {
 io.on('connection', (socket) => {
   console.log('New client connected');
 
-  // Run the Python script and listen for its output
-  const python = spawn('python3', ['main.py']);  // Make sure to use the correct path to Python and script
+
+  const python = spawn('python3', ['main.py']);  
 
   python.stdout.on('data', (data) => {
-    // Send the data from Python script to the front-end
+    
     console.log(`Data from Python: ${data}`);
     socket.emit('pythonData', data.toString());
   });
@@ -42,7 +42,7 @@ io.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     console.log('Client disconnected');
-    python.kill();  // Optionally terminate the Python script when the client disconnects
+    python.kill();  
   });
 });
 

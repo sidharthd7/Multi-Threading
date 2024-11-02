@@ -3,9 +3,8 @@ import time, threading, random as r, sys
 def task(lb, ub, refreshTime):
     while True:
         num = r.randint(lb, ub)
-        print(num)
-        sys.stdout.write(f'{num}\n')  # Output random number to be captured by Node.js
-        sys.stdout.flush()  # Ensure it gets sent immediately
+        sys.stdout.write(f'{num}\n') 
+        sys.stdout.flush()  
         time.sleep(refreshTime)
 
 if __name__ == "__main__":

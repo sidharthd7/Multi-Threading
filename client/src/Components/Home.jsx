@@ -42,16 +42,16 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:5000');  // Connect to the backend
+const socket = io('http://localhost:5000');  
 
 const Home = () => {
   const [boxValues, setBoxValues] = useState([0, 0, 0, 0, 0, 0]);
 
   useEffect(() => {
-    // Listen for data from the backend (Python script)
+    
     socket.on('pythonData', (data) => {
       const num = parseInt(data);
-      // Randomly assign the received value to a box (simplified for now)
+
       const newValues = [...boxValues];
       newValues[Math.floor(Math.random() * 6)] = num;
       setBoxValues(newValues);
