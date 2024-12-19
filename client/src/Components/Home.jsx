@@ -74,7 +74,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <button className='h-10 w-32 p-2 items-center justify-center bg-gradient-to-r from-indigo-400 via-purple-300 to-indigo-400 text-white rounded-md'>
+      <button className='h-10 w-32 p-2 items-center justify-center bg-gradient-to-r from-gray-800 via-gray-600 to-gray-800 text-white rounded-md hover:shadow-lg'>
         Stop
       </button>
     </div>
