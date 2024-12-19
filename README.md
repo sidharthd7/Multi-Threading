@@ -3,7 +3,7 @@
 ## Overview
 This project demonstrates multi-threading in Python by creating multiple threads that perform specific tasks like generating random numbers within defined bounds and refreshing at specified intervals. The GUI displays the output in an organized and interactive way.
 
-![Project Snapshot](snapshot.png)
+![Project Snapshot](./client/src/assets/image.png)
 
 ## Features
 - **Multi-threaded execution:** Six independent threads run simultaneously to simulate different tasks.
